@@ -26,3 +26,5 @@ class User(Base):
 def init_db()->None:
     Base.metadata.create_all(bind=engine)
     return None
+
+init_db()

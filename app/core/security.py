@@ -22,6 +22,10 @@ def verify_password(plan_password, hashed_password):
     return pwd_context.verify(plan_password, hashed_password)
 
 
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
     if expires_delta:
